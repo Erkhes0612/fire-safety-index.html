@@ -1,0 +1,299 @@
+:root{
+  --school-blue: #0b63d6;    /* сургууль логогийн гол өнгө */
+  --fire-1: #ff6b00;
+  --fire-2: #ffb23b;
+  --bg: #f5f7fb;
+  --muted: #6b7280;
+  --card: #ffffff;
+  --glass: rgba(255,255,255,0.6);
+}
+
+*{box-sizing:border-box}
+body{
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", "Helvetica Neue", Arial;
+  margin:0;
+  background:var(--bg);
+  color:#0f172a;
+  line-height:1.4
+}
+.container{max-width:980px; margin:28px auto; padding:0 16px}
+
+/* header */
+.site-header{
+  display:flex; justify-content:space-between; align-items:center;
+  padding:12px 18px;
+  background:linear-gradient(90deg,var(--school-blue), #0a58b3);
+  color:#fff;
+  box-shadow:0 6px 18px rgba(2,6,23,0.12)
+}
+.site-header .left{display:flex; align-items:center; gap:12px}
+.logo{width:56px; height:56px; object-fit:contain; border-radius:8px; background:#fff; padding:6px}
+.brand h1{font-size:18px; margin:0}
+.brand .tag{font-size:12px; opacity:0.95; margin-top:2px}
+
+/* nav */
+.nav a {
+  color: #fff;
+  margin-left: 14px;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 14px;        
+  border-radius: 6px;       
+  transition: all 0.3s ease; 
+}
+
+.nav a:hover {
+  background-color: #ff4500; 
+  color: #fff;              
+}
+
+.btn-outline{
+  border:1px solid rgba(255,255,255,0.18);
+  padding:8px 10px;
+  border-radius:8px
+}
+
+/* hero */
+.hero{
+  display:flex; gap:30px; align-items:center;
+  margin:34px auto;
+  max-width:1100px;
+  padding:22px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.85));
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(2,6,23,0.06)
+}
+.hero-left{flex:1}
+.hero-left h2{margin:0 0 10px 0; font-size:28px; color: #07203a}
+.hero-left p{color:var(--muted); margin:0; font-size:16px; line-height:1.5}
+
+/* right side - том зураг */
+.hero-right{
+  flex:1;
+  display:flex; justify-content:center; align-items:center
+}
+.badge-img{
+  width:100%;
+  max-width:450px;   /* Том болгосон */
+  height:auto;
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  background:linear-gradient(180deg,var(--fire-1),var(--fire-2));
+  box-shadow:0 12px 30px rgba(255,107,0,0.18);
+}
+.badge-img .img-fire{
+  width:100%;
+  height:auto;
+  object-fit:cover;
+  display:block;
+  opacity:0.95;
+}
+
+/* tips */
+.tips .tip{
+  background:var(--card);
+  padding:14px;
+  border-radius:10px;
+  margin-bottom:12px;
+  box-shadow:0 6px 18px rgba(2,6,23,0.04);
+  border-left:6px solid var(--school-blue)
+}
+.tips .tip h4{margin:0 0 6px 0}
+.tips .tip p{margin:0; color:var(--muted)}
+
+/* form/report */
+.report form{display:flex; flex-direction:column; gap:10px; max-width:640px}
+.report input, .report textarea{padding:10px; border-radius:8px; border:1px solid #e6e9ef; background:white}
+.report button{width:140px}
+
+/* footer */
+.site-footer{
+  padding:18px; text-align:center;
+  color:var(--muted);
+  font-size:14px;
+  margin-top:34px
+}
+
+section{
+  padding:60px 20px;
+}
+
+.container{
+  max-width:1000px;
+  margin:0 auto;
+}
+
+.checklist ul, .contact ul{
+  list-style:none;
+  padding:0;
+}
+
+.checklist li, .contact li{
+  font-size:18px;
+  margin:8px 0;
+}
+
+.first-aid img{
+  width:100%;
+  max-width:400px;
+  margin-top:15px;
+  border-radius:12px;
+  box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.slider-section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 50px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 350px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity .6s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide.current {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  gap: 20px;
+}
+
+.slide-text {
+  flex: 1;
+  padding: 20px;
+}
+
+.slide-text h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #07203a;
+}
+
+.slide-text p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.slide-img {
+  flex: 0.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-img img {
+  max-width: 240px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-20%);
+  background: rgba(0,0,0,0.4);
+  border: none;
+  color: white;
+  font-size: 28px;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.arrow:hover { background: rgba(211, 48, 7, 0.7); }
+.arrow.left { left: 15px; }
+.arrow.right { right: 15px; }
+
+/* dots */
+.dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.dots button {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(158, 145, 145, 0.5);
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.dots button.active { background: #ff6b00; }
+
+.site-footer {
+  background: linear-gradient(90deg, var(--school-blue), #0a58b3);
+  color: #fff;
+  padding: 30px 18px;
+  text-align: center;
+  margin-top: 34px;
+}
+
+.site-footer h2 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.site-footer li {
+  font-size: 16px;
+  margin: 6px 0;
+}
+
+.site-footer p {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-top: 18px;
+}
+
+
+/* responsive */
+@media (max-width:880px){
+  .hero{flex-direction:column; text-align:center}
+  .hero-right{width:100%}
+  .nav{display:none}
+  .badge-img{max-width:300px}
+}
